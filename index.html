@@ -83,12 +83,12 @@
       color: #cc6655;
       border-bottom: 2px solid #ffe3d6;
       padding-bottom: 0.5rem;
-      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .collapsible-content {
-      display: none;
-      padding-top: 1rem;
+    h2:hover {
+      border-color: #cc6655;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.1);
     }
 
     .skills-grid {
@@ -117,7 +117,7 @@
 
 <header>
   <img src="profile.jpg" alt="Poojitha N">
-  <h1>Poojitha N</h1>
+  <h1>Poojitha Chowdary Nethi</h1>
   <div id="typewriter"></div>
   <p>
     <a href="mailto:npoojitha19@gmail.com">npoojitha19@gmail.com</a> |
@@ -127,29 +127,27 @@
 
 <main>
   <section>
-    <h2 onclick="toggleSection(this)">About Me</h2>
-    <div class="collapsible-content" style="display:block;">
-      <p>Java Full Stack Developer with over 8 years of experience in designing, developing, testing, and maintaining enterprise-grade web applications. Hands-on expertise with JDK 17+, Spring Boot 3+, and Angular 16+, with deep understanding of Java Design Patterns, Object-Oriented Programming (OOP), and full-stack development across WebLogic 14c+, Tomcat 10+, and Apache 2+ environments. Proficient in Oracle 23c+ database design and Advanced SQL/PLSQL, and experienced in building REST/SOAP APIs and accessibility-compliant web apps using modern frontend and backend frameworks.</p>
+    <h2>About Me</h2>
+    <p>I am an experienced  Java Full stack developer over 8 years of  experience   and delivered high-quality, scalable, and secure applications across  Multiple industries</p>
+    <p>I have a strong foundation in  backend technologies such as Java technologies using various frameworks such as spring, spring boot, Hibernate and also used micro services  for developing the REST FULL web services and coming to the front end side, I have knowledge on working with HTML, CSS, React and Angular frameworks for developing the single page applications Coming to the cloud and CICD tools, I have mostly deployed the micro services on AWS and used Docker, Kubernetes and Jenkins  And on the database side, I worked with the PostgreSQL, MongoDB SQL Server, Oracle DB and DynamoDB</p>
+    <p>I do have experience in building the real time data pipelines with Kafka , and have good experience in testing  using JUnit and Mockito</p>
+    <p>I used to handle  entire implementation, Apart from this implementation, I also involved in the production, support, deployment, on call support and also involved in code reviews. So yeah, I think that's like pretty much about myself.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-box"><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL</div>
+      <div class="skill-box"><strong>Frontend:</strong> React, Angular, HTML5, CSS3</div>
+      <div class="skill-box"><strong>Backend:</strong> Spring Boot, REST APIs, Microservices</div>
+      <div class="skill-box"><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, Jenkins</div>
+      <div class="skill-box"><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB</div>
+      <div class="skill-box"><strong>Others:</strong> Git, Kafka, Swagger, Bitbucket</div>
     </div>
   </section>
 
   <section>
-    <h2 onclick="toggleSection(this)">Technical Skills</h2>
-    <div class="collapsible-content">
-      <div class="skills-grid">
-        <div class="skill-box"><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL</div>
-        <div class="skill-box"><strong>Frontend:</strong> React, Angular, HTML5, CSS3</div>
-        <div class="skill-box"><strong>Backend:</strong> Spring Boot, REST APIs, Microservices</div>
-        <div class="skill-box"><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, Jenkins</div>
-        <div class="skill-box"><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB</div>
-        <div class="skill-box"><strong>Others:</strong> Git, Kafka, Swagger, Bitbucket</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-  <h2 onclick="toggleSection(this)">Experience</h2>
-  <div class="collapsible-content">
+    <h2>Experience</h2>
     <div class="skills-grid">
       <div class="skill-box">
         <strong>AIG (2023–Present):</strong><br>
@@ -171,25 +169,29 @@
         On the frontend, I created responsive UIs using Angular 11, TypeScript, and Bootstrap. I also implemented secure REST APIs with OAuth 2.0, integrated real-time event processing using Apache Kafka, and used MongoDB and PostgreSQL for data management.<br><br>
         I automated CI/CD workflows using Git, Maven, and Jenkins, migrated legacy systems to the cloud, and ensured system reliability through unit testing with JUnit and Mockito.
       </div>
-    </div>
-  </div>
-</section>
 
+      <div class="skill-box">
+        <strong>Sudha Analytics (2017–2018):</strong><br>
+        At Sudha Analytics, I was involved in the complete software development life cycle of an enterprise web application. I designed and developed backend services using Java 8, Spring MVC, and Hibernate, and created SOAP/REST APIs for data exchange.<br><br>
+        I implemented the presentation layer using Spring MVC with JSP and JSTL, and created reusable UI components using HTML, CSS, and JavaScript. I also integrated React components triggered by Angular lifecycle hooks to enhance interactivity.<br><br>
+        On the cloud side, I deployed Docker containers via AWS CodePipeline into ECS and managed environment provisioning using AWS services like EC2, S3, and CloudFormation. I also contributed to data processing using Spark with Scala and integrated Apache NiFi pipelines.<br><br>
+        Additionally, I used Hibernate and JPA for ORM and worked on Oracle and PostgreSQL for database operations, ensuring data consistency and performance optimization.
+      </div>
+    </div>
+  </section>
 
   <section>
-    <h2 onclick="toggleSection(this)">Certifications</h2>
-    <div class="collapsible-content">
-      <ul>
-        <li>AWS Certified Solution Architect – Associate</li>
-        <li>Certified Kubernetes Administrator (CKA)</li>
-        <li>Java & SQL Certifications – HackerRank</li>
-      </ul>
-    </div>
+    <h2>Certifications</h2>
+    <ul>
+      <li>AWS Certified Solution Architect – Associate</li>
+      <li>Certified Kubernetes Administrator (CKA)</li>
+      <li>Java & SQL Certifications – HackerRank</li>
+    </ul>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 Poojitha  N | Built with ❤ and hosted on GitHub
+  &copy; 2025 Poojitha N | Built with ❤ and hosted on GitHub
 </footer>
 
 <script>
@@ -205,12 +207,6 @@
   }
   typeWriter();
 
-  // Collapsible Section Toggle
-  function toggleSection(header) {
-    const content = header.nextElementSibling;
-    content.style.display = content.style.display === "block" ? "none" : "block";
-  }
-
   // Scroll Fade-In Animation
   const sections = document.querySelectorAll("section");
   window.addEventListener("scroll", () => {
@@ -220,7 +216,7 @@
       if (top < trigger) section.classList.add("visible");
     });
   });
-  window.dispatchEvent(new Event("scroll")); // trigger on load
+  window.dispatchEvent(new Event("scroll"));
 </script>
 
 </body>
