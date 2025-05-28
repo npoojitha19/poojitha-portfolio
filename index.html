@@ -10,6 +10,7 @@
       margin: 0;
       background-color: #fef6f0;
       color: #333;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -33,12 +34,15 @@
       color: #cc6655;
     }
 
-    header p {
-      margin: 0.5rem 0;
+    #typewriter {
       font-size: 1.1rem;
+      font-weight: bold;
+      color: #cc6655;
+      margin-top: 0.5rem;
     }
 
-    a {
+    header p, a {
+      font-size: 1rem;
       color: #cc6655;
       text-decoration: none;
     }
@@ -65,10 +69,12 @@
       border-bottom: 2px solid #ffe3d6;
       padding-bottom: 0.5rem;
       color: #cc6655;
+      cursor: pointer;
     }
 
-    ul {
-      padding-left: 1.2rem;
+    .collapsible-content {
+      display: none;
+      padding-top: 1rem;
     }
 
     .skills-grid {
@@ -98,59 +104,79 @@
 <header>
   <img src="profile.jpg" alt="Poojitha Chowdary Nethi">
   <h1>Poojitha Chowdary Nethi</h1>
-  <p>Sr. Java Full Stack Developer</p>
+  <div id="typewriter"></div>
   <p>
     <a href="mailto:npoojitha19@gmail.com">npoojitha19@gmail.com</a> |
-    <a href="http://www.linkedin.com/in/poojitha-n-5439a0271" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/poojitha-n-5439a0271" target="_blank">LinkedIn</a>
   </p>
 </header>
 
 <main>
   <section>
-    <h2>About Me</h2>
-    <p>Java Full Stack Developer with over 8 years of experience in designing, developing, testing, and maintaining enterprise-grade web applications. Hands-on expertise with JDK 17+, Spring Boot 3+, and Angular 16+, with deep understanding of Java Design Patterns, Object-Oriented Programming (OOP), and full-stack development across WebLogic 14c+, Tomcat 10+, and Apache 2+ environments. Proficient in Oracle 23c+ database design and Advanced SQL/PLSQL, and experienced in building REST/SOAP APIs and accessibility-compliant web apps using modern frontend and backend frameworks.
-  </section>
-
-  <section>
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-box"><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL</div>
-      <div class="skill-box"><strong>Frontend:</strong> React, Angular, HTML5, CSS3</div>
-      <div class="skill-box"><strong>Backend:</strong> Spring Boot, REST APIs, Microservices</div>
-      <div class="skill-box"><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, Jenkins</div>
-      <div class="skill-box"><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB</div>
-      <div class="skill-box"><strong>Others:</strong> Git, Kafka, Swagger, Bitbucket</div>
+    <h2 onclick="toggleSection(this)">About Me</h2>
+    <div class="collapsible-content" style="display: block;">
+      <p>Java Full Stack Developer with 8+ years of experience in designing, developing, testing, and maintaining enterprise-grade web applications. Proficient with JDK 17+, Spring Boot 3+, Angular 16+, WebLogic 14c+, Tomcat 10+, and Oracle 23c+. Strong in REST/SOAP APIs, design patterns, and building accessibility-compliant UIs.</p>
     </div>
   </section>
 
   <section>
-    <h2>Experience</h2>
-    <p><strong>AIG (2023–Present):</strong> At AIG, I’m working on a digital insurance platform that modernizes accident and claims management. My role involves developing microservices using Java 17 and Spring Boot 3.0+, and deploying them on Apache Tomcat 10+. I built secure REST APIs with OAuth 2.0 and JWT, and developed dynamic UIs using React.js with Redux.</p>
-    <p>I integrated key AWS services like Lambda, S3, and SNS to enable serverless processing and real-time notifications. I also used Apache Kafka for event-driven messaging and worked with MongoDB and PostgreSQL to handle structured and unstructured data efficiently.</p>
-    <p>On the DevOps side, I set up CI/CD pipelines using Jenkins and Docker, deployed services to WebLogic 14c+, and ensured compliance with HIPAA and GDPR. Overall, I contributed to delivering a secure, scalable, and cloud-native solution that improved user experience and operational efficiency.</p>
-    <p><strong>Wells Fargo (2022–2023):</strong> At Wells Fargo, I worked on developing a secure and efficient banking platform for customer transactions, account management, and loan processing. I built RESTful microservices using Java 17 and Spring Boot 3+, and deployed them on WebLogic 14c+ and Tomcat 10+ servers. On the frontend, I developed dynamic, single-page applications using Angular 16+ and React.js, ensuring a smooth and accessible user experience.</p>
-    <p>I used AWS RDS and DynamoDB for storing financial data and implemented Apache Kafka for real-time transaction processing and alerts. I also integrated third-party payment gateways and followed strong security practices with OAuth 2.0 and JWT for authentication and authorization.</p>
-    <p>In addition, I automated builds and deployments using Jenkins and GitLab CI, optimized complex SQL queries, and collaborated closely with QA teams using JUnit, Mockito, and Selenium to ensure performance and compliance with Wells Fargo’s security standards..</p>
-    <p><strong>HCL (2018–2021):</strong> At HCL, I worked on building a cloud-native airline management platform that handled flight bookings, check-ins, and loyalty programs. I developed scalable microservices using Java 8 and Spring Boot, and deployed them in Docker containers managed by Kubernetes on Azure and AWS.</p>
-    <p>On the frontend, I created responsive UIs using Angular 11, TypeScript, and Bootstrap, ensuring a seamless experience across devices. I also implemented secure REST APIs with OAuth 2.0, integrated real-time event processing using Apache Kafka, and used MongoDB and PostgreSQL for data management.</p>
-    <p>I automated CI/CD workflows using Git, Maven, and Jenkins, and configured deployments across multiple environments using Docker and container orchestration tools. Additionally, I played a key role in migrating legacy systems to the cloud and ensured system reliability through unit testing with JUnit and Mockito.</p>
-
-.</p>
+    <h2 onclick="toggleSection(this)">Technical Skills</h2>
+    <div class="collapsible-content">
+      <div class="skills-grid">
+        <div class="skill-box"><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL</div>
+        <div class="skill-box"><strong>Frontend:</strong> React, Angular, HTML5, CSS3</div>
+        <div class="skill-box"><strong>Backend:</strong> Spring Boot, REST APIs, Microservices</div>
+        <div class="skill-box"><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, Jenkins</div>
+        <div class="skill-box"><strong>Databases:</strong> Oracle 23c, PostgreSQL, MongoDB</div>
+        <div class="skill-box"><strong>Tools:</strong> GitHub, Kafka, Swagger, Tomcat, WebLogic, Apache 2+</div>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>AWS Certified Solution Architect – Associate</li>
-      <li>Certified Kubernetes Administrator (CKA)</li>
-      <li>Java & SQL Certifications – HackerRank</li>
-    </ul>
+    <h2 onclick="toggleSection(this)">Experience</h2>
+    <div class="collapsible-content">
+      <p><strong>AIG (2023–Present):</strong> Built scalable microservices using Java 17 and Spring Boot 3.0+, deployed via Apache Tomcat 10+. Developed responsive UIs with React.js and integrated AWS Lambda, S3, and Kafka. Maintained compliance with HIPAA and GDPR.</p>
+      <p><strong>Wells Fargo (2022–2023):</strong> Developed banking apps using Spring Boot, Angular 16+, WebLogic, and Kafka. Integrated third-party gateways and secured apps with OAuth 2.0 and JWT.</p>
+      <p><strong>HCL (2018–2021):</strong> Built airline platforms using Spring Boot, Docker, Kubernetes, and Angular. Migrated legacy systems to cloud and improved performance through microservices architecture.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 onclick="toggleSection(this)">Certifications</h2>
+    <div class="collapsible-content">
+      <ul>
+        <li>AWS Certified Solution Architect – Associate</li>
+        <li>Certified Kubernetes Administrator (CKA)</li>
+        <li>Java & SQL Certifications – HackerRank</li>
+      </ul>
+    </div>
   </section>
 </main>
 
 <footer>
   &copy; 2025 Poojitha Chowdary Nethi | Built with ❤ and hosted on GitHub
 </footer>
+
+<script>
+  // Typewriter Effect
+  const text = "Sr. Java Full Stack Developer";
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typewriter").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 70);
+    }
+  }
+  typeWriter();
+
+  // Toggle collapsible sections
+  function toggleSection(header) {
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+</script>
 
 </body>
 </html>
